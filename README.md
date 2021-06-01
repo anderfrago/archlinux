@@ -148,7 +148,7 @@ mkswap /dev/sda1
 A continuación, formateamos nuestro sistema de archivos real con el siguiente comando.
 
 ```bash
-
+mkfs.xfs /dev/sda2
 ```
 
 el cual será nuestro sistema de archivos raíz.
