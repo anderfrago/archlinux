@@ -145,6 +145,10 @@ Vamos a crear el sistema de archivos para swaping con el comando mkswap, dando f
 mkswap /dev/sda1
 ```
 
+{% hint style="info" %}
+Debes formatear el resto de espacio libre con tipo Linux, para instalar el sistema operativo en el. 
+{% endhint %}
+
 A continuación, formateamos nuestro sistema de archivos real con el siguiente comando.
 
 ```bash
