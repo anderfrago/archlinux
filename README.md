@@ -175,11 +175,13 @@ También podemos agregar el bootloader grub, un potente editor vim, el completad
 
 ![](.gitbook/assets/13.png)
 
+```
 pacstrap /mnt base base-devel linux linux-firmware grub vim bash-completion openssh networkmanager
+```
 
 ### Fstab
 
-Lo siguiente que haremos es crear el archivo fstab \([https://wiki.archlinux.org/index.php/Fstab\_\(Espa%C3%B1ol\)](https://wiki.archlinux.org/index.php/Fstab_%28Espa%C3%B1ol%29)\) para que el sistema monte estos sistemas de archivos en el arranque. Utilizamos los archivos de tipo sudo que haya y utilizamos U para hacer referencia a las UUID de los sistemas de archivos.
+Lo siguiente que haremos es crear el archivo [fstab ](https://wiki.archlinux.org/index.php/Fstab_%28Espa%C3%B1ol%29)para que el sistema monte estos sistemas de archivos en el arranque. Utilizamos los archivos de tipo sudo que haya y utilizamos U para hacer referencia a las UUID de los sistemas de archivos.
 
 | ![Imagen que contiene luz
 
@@ -189,7 +191,9 @@ Descripci&#xF3;n generada autom&#xE1;ticamente](.gitbook/assets/15.png) | UUID e
 
  Queremos leer lo que se encuentre en el directorio /mnt y escribirlo en la ruta completa donde se ubica el archivo fstab.
 
-genfstab -pU /mnt &gt;&gt; /mnt/etc/fstab
+```bash
+genfstab -pU /mnt >> /mnt/etc/fstab
+```
 
 ### Chroot
 
